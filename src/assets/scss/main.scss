@@ -1,0 +1,8 @@
+// Import global styles
+@import "variables";
+@import "mixins";
+@import "global";
+
+.app {
+  min-width: 375px;
+}

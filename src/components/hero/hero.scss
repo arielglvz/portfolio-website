@@ -1,0 +1,88 @@
+@import '../../assets/scss/main.scss';
+
+.hero {
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include breakpoint-up(large) {
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    min-height: 17.5rem; 
+    width: 100%;
+    padding: 1rem;
+
+    @include breakpoint-up(large) {
+      padding: unset;
+      flex: 3;
+      order: 2;
+      height: 34rem;
+    }
+  }
+
+  &__text {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+
+    @include breakpoint-up(large) {
+      display: unset;
+      flex-direction: unset;
+      align-items: unset;
+      text-align: unset;
+      flex: 2;
+      order: 1;
+      text-align: left;
+    }
+  }
+
+  &__greeting {
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 0.1875rem;
+    // margin-bottom: 1.3125rem;
+    font-weight: 600;
+  }
+
+  h1 {
+    min-width: 350px;
+    font-size: 2rem;
+    letter-spacing: -0.125rem;
+    margin-bottom: 1.3125rem;
+    
+    @include breakpoint-up(large) {
+      font-size: 4.5rem;
+    }
+
+    > span {
+      font-weight: bold;
+      white-space: nowrap;
+    }
+  }
+
+  &__introduction {
+    margin-bottom: 2.1875rem;
+  }
+
+  &__buttons {
+    column-gap: 20px;
+
+    .hire-me {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.125rem;
+    }
+  
+    .portfolio {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.125rem;
+    }
+  }
+}
