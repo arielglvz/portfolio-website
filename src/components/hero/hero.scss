@@ -3,42 +3,44 @@
 .hero {
 
   .container {
-    display: flex;
-    flex-direction: column-reverse;
-
-    @include breakpoint-up(large) {
-      align-items: center;
-      flex-direction: row;
+  
+    @include breakpoint-up(medium) {
+      display: flex;
+      
     }
-  }
-
-  &__image {
-    min-height: 17.5rem; 
-    width: 100%;
-    padding: 1rem;
-
-    @include breakpoint-up(large) {
-      padding: unset;
-      flex: 3;
-      order: 2;
-      height: 34rem;
+    
+    @include breakpoint-down(small) {
+      padding-top: 0px;
+      padding-bottom: 0px;
     }
   }
 
   &__text {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
+    text-align: center;
 
     @include breakpoint-up(large) {
-      display: unset;
-      flex-direction: unset;
-      align-items: unset;
-      text-align: unset;
-      flex: 2;
-      order: 1;
+      width: 100%;
+      flex: 1;
       text-align: left;
+    }
+    
+  }
+
+  &__image {
+    width: 100%;
+
+    img {
+      width: 100%;
+      max-width: 570px;
+      height: auto;
+      max-height: 640px;
+    }
+
+    @include breakpoint-up(large) {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
@@ -46,7 +48,6 @@
     margin: 0;
     font-size: 1rem;
     letter-spacing: 0.1875rem;
-    // margin-bottom: 1.3125rem;
     font-weight: 600;
   }
 
@@ -61,6 +62,7 @@
     }
 
     > span {
+      color: $primary-500;
       font-weight: bold;
       white-space: nowrap;
     }
@@ -73,6 +75,14 @@
   &__buttons {
     column-gap: 20px;
 
+    @include breakpoint-down(medium) {
+      justify-content: center;
+    }
+ 
+    @include breakpoint-up(large) {
+      justify-content: flex-start;
+    }
+ 
     .hire-me {
       font-size: 1rem;
       font-weight: 500;

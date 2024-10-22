@@ -6,12 +6,10 @@ import { heroImg } from '../../assets/images/hero';
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="container">
-        <img class="hero__image" src={heroImg} alt="hero image" />
-        
+      <div className="container container--pt">
         <div className="hero__text container--pall">
           <p className="hero__greeting">HELLO</p>
-          <h1>I'm Yeyel a <span>Web Developer</span></h1>
+          <h1>I'm <span>Yeyel</span> a <span>Web Developer</span></h1>
           <p className="hero__introduction">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ad ratione. 
             Blanditiis, facere fugit adipisci repellendus repudiandae quam nam molestias.
@@ -26,6 +24,9 @@ const Hero = () => {
               text='Portfolio' /
             >
           </div>
+        </div>
+        <div className="hero__image container--pall container--no-py">
+          <img src={heroImg} alt="hero image" />
         </div>
       </div>
     </section>

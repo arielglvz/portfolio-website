@@ -1,0 +1,18 @@
+@import '../../assets/scss/main.scss';
+
+.services {
+  // background-color: red;
+
+  &__card-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {
+    display: flex;
+
+    @include breakpoint-down(medium ) {
+      flex-direction: column;
+    }
+  }
+}
