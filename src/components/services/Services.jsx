@@ -1,12 +1,12 @@
 import React from 'react'
 import './services.scss'
 import SectionTitle from '../ui/SectionTitle'
-import Card from './components/card/Card'
+import ServiceCard from './components/card/ServiceCard'
 
 const Services = () => {
   return (
     <div className="services">
-      <div className="container container--pall">
+      <div className="container container--pall container--no-pt">
         <SectionTitle 
           title='Services' 
           subtitle='How Can I Help You With'
@@ -14,21 +14,21 @@ const Services = () => {
 
         <div className="services__card-container">
           <div className="services__content container--px">
-            <Card 
+            <ServiceCard 
               title='Web Development'
               desc='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
                     veritatis nobis saepe itaque rerum nostrum aliquid obcaecati odio
                     officia deleniti. Expedita iste et illum, quaerat pariatur consequatur
                     eum nihil itaque!'
             />
-            <Card 
+            <ServiceCard 
               title='Web Development'
               desc='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
                     veritatis nobis saepe itaque rerum nostrum aliquid obcaecati odio
                     officia deleniti. Expedita iste et illum, quaerat pariatur consequatur
                     eum nihil itaque!'
             />
-            <Card 
+            <ServiceCard 
               title='Web Development'
               desc='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
                     veritatis nobis saepe itaque rerum nostrum aliquid obcaecati odio

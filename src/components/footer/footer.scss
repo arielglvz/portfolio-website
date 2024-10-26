@@ -1,0 +1,113 @@
+@import '../../assets/scss/main.scss';
+
+.footer {
+  padding: 2rem 0;
+  background-color: $primary-500;
+
+  &__logo {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.15rem;
+    white-space: nowrap;
+    color: #FFFFFF;
+    cursor: pointer;
+
+    @include breakpoint-up(large) {
+      grid-area: logo;
+    }
+  }
+
+  &__content {
+    display: grid;
+      grid-template-columns: 2fr 1fr 1fr 3fr;
+      grid-template-rows: 1fr auto;
+      grid-template-areas:
+        'logo link1 link2 cta'
+        'logo link1 link2 cta';
+      gap: 1rem;
+      justify-items: start;
+    
+    @include breakpoint-up(large) {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 3fr;
+      grid-template-rows: 1fr auto;
+      grid-template-areas:
+        'logo link1 link2 cta'
+        'logo link1 link2 cta';
+      gap: 1rem;
+      justify-items: start;
+    }
+
+    > ul {
+      list-style: none;
+    }
+  }
+
+  &__socials {
+    list-style: none;
+    display: flex;
+
+    @include breakpoint-up(large) {
+      grid-area: social;
+      align-self: end;
+    }
+
+    > li {
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      > svg {
+        fill: white;
+      }
+    }
+
+    > li:not(:last-child){
+      > svg {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+
+  &__links {
+
+    .link-1 {
+      margin-right: 11rem;
+      line-height: 1.5rem;
+
+      @include breakpoint-up(large) {
+        grid-area: link1;
+      }
+    }
+   
+    .link-2 {
+      margin-right: 11rem;
+      line-height: 1.5rem;
+
+      @include breakpoint-up(large) {
+        grid-area: link2;
+      }
+    }
+  }
+
+  &__item {
+    // display: inline-block;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+
+  .button {
+    background-color: $gray-900;
+    color: $white-100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    @include breakpoint-up(large) {
+      grid-area: cta;
+    }
+  }
+}

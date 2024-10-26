@@ -1,9 +1,9 @@
 import React from 'react';
-import './hero.scss';
+import './hero2.scss';
 import Button from '../ui/Button';
 import { heroImg } from '../../assets/images/hero';
 
-const Hero = () => {
+const Hero2 = () => {
   return (
     <section className="hero">
       <div className="hero__content container container--pall">
@@ -16,21 +16,21 @@ const Hero = () => {
           </p>
           <div className="hero__buttons flex">
             <Button 
-              className="hire-me button--fill button--fill flex flex-jc-c flex-ai-c" 
-              text='Hire me' 
-            />
-            <Button 
               className="portfolio button--border flex flex-jc-c flex-ai-c" 
               text='Portfolio' /
             >
+            <Button 
+              className="hire-me button--fill button--fill flex flex-jc-c flex-ai-c" 
+              text='CV' 
+            />
           </div>
         </div>
-        <div className="hero__image">
+        {/* <div className="hero__image">
           <img src={heroImg} alt="hero image" />
-        </div>
+        </div> */}
       </div>
     </section>
   )
 }
 
-export default Hero
+export default Hero2

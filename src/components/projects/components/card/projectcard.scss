@@ -1,0 +1,54 @@
+@import '../../../../assets/scss/main.scss';
+
+.pcard {
+  max-width: 18.75rem;
+  border-radius: 10px;
+  // margin: 12px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+  
+  &__img {
+    width: 100%;
+  }
+
+  &__text {
+    padding: 1.5rem;
+    background-color: #EEF4FA;
+    height: 9rem;
+  }
+
+  &__title {
+    color: #262626;
+    font-size: 1.5em;
+    line-height: normal;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+  }
+
+  &__desc {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #452c2c;
+    width:200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    > a {
+      text-decoration: none;
+      color: $primary-500;
+      font-weight: 500;
+    }
+  }
+
+  &__icon {
+    // fill: red;
+    font-size: 1rem;
+  }
+}
+

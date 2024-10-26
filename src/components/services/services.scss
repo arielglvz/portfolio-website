@@ -3,16 +3,30 @@
 .services {
   // background-color: red;
 
-  &__card-container {
-    display: flex;
-    justify-content: center;
-  }
+  > .container {
+    @include breakpoint-up(large) {
+      padding-top: 0;
 
-  &__content {
-    display: flex;
-
-    @include breakpoint-down(medium ) {
-      flex-direction: column;
+    >  .title {
+      // margin-bottom: 0;
+    }
     }
   }
+
+&__card-container {
+  display: flex;
+  justify-content: center;
+}
+
+&__content {
+  display: flex;
+
+  @include breakpoint-down(small) {
+    flex-direction: column;
+  }
+
+  @include breakpoint-up(large) {
+    padding-top: 0;
+  }
+}
 }

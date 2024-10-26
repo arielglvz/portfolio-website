@@ -1,0 +1,267 @@
+@import '../../assets/scss/main.scss';
+
+.home {
+  &__content {
+    position: relative;
+    justify-content: space-around;
+    background-color: aliceblue;
+  }
+
+  &__jobs {
+    flex: 1;
+    width: 20.853rem;
+    height: 33.1rem;
+  }
+  
+  &__userinfo {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    right: 50%;
+    width: 90%;
+    transform: translate(-50%, 0%);
+    z-index: 1;
+    transition: all 500ms ease-in-out;
+
+    @include breakpoint-up(medium) {
+      width: 19.6rem;
+    }
+
+    @include breakpoint-up(large) {
+      top: -67px;
+      width: 26rem;
+    }
+  }
+
+  &__user-profile{
+    position: absolute;
+    top: -5%;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    right: 50%;
+    width: 11.473rem;
+    height: 11.473rem;
+    border-radius: 100%;
+    border: 0.3125rem solid #D9D9D9;
+    overflow: hidden;
+    z-index: 2;
+    
+    > img {
+      top: 88%;
+      width: 100%;
+      height: auto;
+    }
+
+    @include breakpoint-down(medium) {
+      top: 0%;
+    }
+
+    @include breakpoint-up(large) {
+      top: 10%;
+      min-width: 19.473rem;
+      height: 19.473rem;
+    }
+  }
+
+  &__userdiv {
+    height: 22.1rem;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 1;
+
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    border: 1px solid rgba(255, 255, 255, 0.37);
+    border: 2px solid $white-100;
+
+    @include breakpoint-up(medium) {
+      height: 22rem;
+    }
+    
+    @include breakpoint-up(large) {
+      height: 30rem;
+    }
+  }
+  
+  &__details {
+    width: 15rem;
+    height: auto;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    letter-spacing: -4%;
+
+    @include breakpoint-up(medium) {
+      height: 13.5rem;
+    }
+    
+    @include breakpoint-up(large) {
+      height: 14.388rem;
+      width: 20rem;
+    }
+    
+    > h1 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      
+      
+      @include breakpoint-up(large) {
+        font-size: 1.6125rem;
+      }
+    }
+
+    > p {
+      margin-bottom: 1rem;
+      color: $gray;
+      font-size: 1rem;
+      font-weight: 500;
+  
+      @include breakpoint-up(large) {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__socials {
+    margin-bottom: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: hover 300ms ease-in-outS;
+  }
+
+  &__soc-item {
+    width: 26px;
+    height: 26px;
+    padding: 2px;
+    border-radius: 100%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+
+    &:not(:last-child) {
+      // margin-right: 1rem;
+    }
+  }
+
+  &__github:hover {
+    background-color: #0D1117;
+    color: #FFFFFF;
+  }
+
+  &__linkedin:hover {
+    background-color: #0077B5;
+    color: #FFFFFF;
+  }
+  
+  &__twitter:hover {
+    background-color: #13171A;
+    color: #FFFFFF;
+  }
+
+  &__google:hover {
+    background-color: #FFFFFF;
+    color: #EA4335;
+  }
+
+
+  &__buttons {
+    flex-direction: column;
+    gap: 1rem;
+
+    @include breakpoint-up(medium) {
+      flex-direction: row;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    height: 3rem;
+    background-color: #0866FF;
+    border-radius: 4px;
+    color: $white-100;
+    font-size: 1.10125rem;
+    cursor: pointer;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+
+    @include breakpoint-up(medium) {
+      width: 9rem;
+    }
+  }
+
+  .btn1 {
+
+  }
+
+  .btn2 {
+    // background-color: #BEBEBE;
+    background-color: #E7F3FF;
+    color: rgb(51, 65, 85);
+    
+  }
+
+  &__radio-inputs {
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    background-color: #E7F3FF;
+    color: #1877F2;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;
+    width: 100%;
+    font-size: 14px;
+
+    @include breakpoint-down(small) {
+      display: none;
+    }
+  }
+  
+  &__radio {
+    flex: 1 1 auto;
+    text-align: center;
+    
+    > input {
+      display: none;
+    }
+
+    > input[type="radio"]:checked 
+    + .home__radio-name {
+      background-color: #0866FF;
+      border-radius: 4px;
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+  }
+  
+  &__radio-name {
+    user-select: none;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: none;
+    padding: .5rem 0;
+    color: rgba(51, 65, 85, 1);
+    transition: all .15s ease-in-out;
+  }
+
+  &__projects {
+    flex: 1;
+    width: 20.853rem;
+    height: 33.1rem;
+  }
+}
