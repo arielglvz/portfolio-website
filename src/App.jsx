@@ -6,6 +6,7 @@ import Home from './components/home/index.jsx'
 import Navbar from './components/navbar/Navbar.jsx'
 import Projects from './components/projects/Projects.jsx'
 import Services from './components/services/Services.jsx'
+import Test from './components/test/Test.jsx'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       {/* <Hero /> */}
       <Hero3 />
       <Home />
+      <Test />
       {/* <Services /> */}
       {/* <Projects /> */}  
       {/* <Footer /> */}

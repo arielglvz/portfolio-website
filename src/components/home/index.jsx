@@ -3,12 +3,27 @@ import './home.scss'
 import { FaGithub, FaLinkedinIn, FaGoogle  } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 import { profileImg } from '../../assets/images/hero'
+import CarouselCard from '../ui/CarouselCard';
+
+import img1 from '../../assets/images/slider/img_1.jpg'
+import img2 from '../../assets/images/slider/img_2.jpg'
+import img3 from '../../assets/images/slider/img_3.jpg'
+import img4 from '../../assets/images/slider/img_4.jpg'
+import img5 from '../../assets/images/slider/img_5.jpg'
 
 const switchTabs = [
   { value: 0, name: 'Projects' },
   { value: 1, name: 'Default' },
   { value: 2, name: 'Blogs' },
-];
+];  
+
+const CarouselItem = [
+  {id: 1, name: 'One', url: img1},
+  {id: 2, name: 'Two', url: img2},
+  {id: 3, name: 'Three', url: img3},
+  {id: 4, name: 'Four', url: img4},
+  {id: 5, name: 'Five', url: img5}
+]
 
 const userInfoPosStyle =[
   { left: '75%' },
@@ -28,7 +43,9 @@ const Home = () => {
     <section className="home">
       <div className="home__content container container--no-pt flex">
         
-        <div className="home__jobs"></div>
+        <div className="home__projects">
+          <CarouselCard card = {CarouselItem} />
+        </div>
         
         <div className="home__userinfo" style={userInfoPosStyle[selectedValue]}>
           <div className="home__user-profile">
@@ -76,7 +93,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="home__projects"></div>
+        <div className="home__jobs"></div>
       </div>
     </section>
   )

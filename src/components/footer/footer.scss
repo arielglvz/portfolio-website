@@ -37,14 +37,9 @@
       gap: 1rem;
       justify-items: start;
     }
-
-    > ul {
-      list-style: none;
-    }
   }
 
   &__socials {
-    list-style: none;
     display: flex;
 
     @include breakpoint-up(large) {

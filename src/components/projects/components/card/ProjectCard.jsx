@@ -1,6 +1,6 @@
 import React from 'react'
 import './projectcard.scss'
-import { testimage } from '../../../../assets/images/myproject'
+import testimage from '../../../../assets/images/myproject/testimage.jpg'
 import { MdArrowOutward } from "react-icons/md";
 
 const ProjectCard = ({ title = 'Title' }) => {
